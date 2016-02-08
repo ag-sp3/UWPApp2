@@ -11,7 +11,12 @@
         x:Name="myGrid"
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <StackPanel VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--<StackPanel VerticalAlignment="Center">
             <Button Background="PeachPuff" Click="Button_Click_1">
                 <StackPanel Orientation="Horizontal" >
                     <SymbolIcon Symbol="Save" />
@@ -22,6 +27,20 @@
 
             <TextBlock x:Name="myText" Margin="10,10,0,0" Text="Click!"></TextBlock>
 
+        </StackPanel>-->
+
+        <StackPanel VerticalAlignment="Center">
+            <Button HorizontalAlignment="Left" Background="AliceBlue" Content="Left"/>
+            <Button HorizontalAlignment="Center" Background="LemonChiffon" Content="Center" />
+            <Button HorizontalAlignment="Right" Background="PeachPuff" Content="Right"/>
+            <Button HorizontalAlignment="Stretch" Background="Pink" Content="Stretceh"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Grid.Row="1">
+            <Button HorizontalAlignment="Stretch" Background="AliceBlue" HorizontalContentAlignment="Left">Left</Button>
+            <Button HorizontalAlignment="Stretch" Background="LemonChiffon" HorizontalContentAlignment="Center">Center</Button>
+            <Button HorizontalAlignment="Stretch" Background="PeachPuff" HorizontalContentAlignment="Right">Right</Button>
+            <Button HorizontalAlignment="Stretch" Background="Pink" HorizontalContentAlignment="Stretch">Stretch</Button>
         </StackPanel>
         
     </Grid>

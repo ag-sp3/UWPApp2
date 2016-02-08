@@ -43,14 +43,14 @@ namespace UWPApp2
             //myGrid.Children.Add(button);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            myText.Text = "Inner Button Clicked";
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    myText.Text = "Inner Button Clicked";
+        //}
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            myText.Text = "Outer Button Clicked";
-        }
+        //private void Button_Click_1(object sender, RoutedEventArgs e)
+        //{
+        //    myText.Text = "Outer Button Clicked";
+        //}
     }
 }
