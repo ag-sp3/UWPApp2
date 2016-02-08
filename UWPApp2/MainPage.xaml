@@ -11,12 +11,18 @@
         x:Name="myGrid"
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <!--<Button Background="PeachPuff">
-            <StackPanel Orientation="Horizontal">
-                <SymbolIcon Symbol="Save" />
-                <TextBlock Text="Save" Margin="5,0,0,0"/>
-            </StackPanel>
-        </Button>-->
+        <StackPanel VerticalAlignment="Center">
+            <Button Background="PeachPuff" Click="Button_Click_1">
+                <StackPanel Orientation="Horizontal" >
+                    <SymbolIcon Symbol="Save" />
+                    <TextBlock Text="Save" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                    <Button Background="AliceBlue" Margin="5,0,0,0" Click="Button_Click">Inner Button</Button>
+                </StackPanel>
+            </Button>
 
+            <TextBlock x:Name="myText" Margin="10,10,0,0" Text="Click!"></TextBlock>
+
+        </StackPanel>
+        
     </Grid>
 </Page>

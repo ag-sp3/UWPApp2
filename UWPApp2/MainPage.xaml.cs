@@ -31,16 +31,26 @@ namespace UWPApp2
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            var button = new Button
-            { Background = new SolidColorBrush(Colors.PeachPuff) };
+            //var button = new Button
+            //{ Background = new SolidColorBrush(Colors.PeachPuff) };
 
-            var stackPanel = new StackPanel { Orientation = Orientation.Horizontal };
-            stackPanel.Children.Add(new SymbolIcon { Symbol = Symbol.Save });
-            stackPanel.Children.Add(new TextBlock { Text = "Save", Margin = new Thickness { Left = 5 } });
+            //var stackPanel = new StackPanel { Orientation = Orientation.Horizontal };
+            //stackPanel.Children.Add(new SymbolIcon { Symbol = Symbol.Save });
+            //stackPanel.Children.Add(new TextBlock { Text = "Save", Margin = new Thickness { Left = 5 } });
 
-            button.Content = stackPanel;
+            //button.Content = stackPanel;
 
-            myGrid.Children.Add(button);
+            //myGrid.Children.Add(button);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            myText.Text = "Inner Button Clicked";
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            myText.Text = "Outer Button Clicked";
         }
     }
 }
