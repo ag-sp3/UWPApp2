@@ -13,6 +13,8 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
@@ -42,6 +44,48 @@
             <Button HorizontalAlignment="Stretch" Background="PeachPuff" HorizontalContentAlignment="Right">Right</Button>
             <Button HorizontalAlignment="Stretch" Background="Pink" HorizontalContentAlignment="Stretch">Stretch</Button>
         </StackPanel>
+
+        <RelativePanel x:Name="myRelativePanel"  Grid.Row="2" Background="AliceBlue">
+
+            <StackPanel VerticalAlignment="Center"  Background="Pink" x:Name="sp1" 
+                        RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+                <Rectangle Fill="LemonChiffon" Width="100" Height="100"></Rectangle>
+                <Rectangle Fill="LemonChiffon" Width="100" Height="100"></Rectangle>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center"  Background="PeachPuff" HorizontalAlignment="Center" x:Name="sp2"
+                        Padding="10" RelativePanel.AlignVerticalCenterWithPanel="True"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True">
+                <Rectangle Fill="LemonChiffon" Width="100" Height="100" 
+                           RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.RenderTransform>
+                        <RotateTransform Angle="45"></RotateTransform>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle Fill="LemonChiffon" Width="100" Height="100"></Rectangle>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center"  Background="PeachPuff" HorizontalAlignment="Right" x:Name="sp3"
+                        RelativePanel.RightOf="sp2" RelativePanel.AlignVerticalCenterWithPanel="True"
+                        RelativePanel.AlignRightWithPanel="True">
+                <Rectangle Fill="LemonChiffon" Width="100" Height="100" Margin="10" />
+
+                <Rectangle Fill="LemonChiffon" Width="100" Height="100" Margin="10" ></Rectangle>
+            </StackPanel>
+
+        </RelativePanel>
+       
+
+            
+
+
+            
+
+            
+
+
+     
+        
         
     </Grid>
 </Page>
